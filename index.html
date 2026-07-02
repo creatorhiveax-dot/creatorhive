@@ -378,7 +378,12 @@ form.addEventListener('submit',async ev=>{
   if(form._honey.value) return; // spam bot filled the hidden field
   btn.disabled=true;btn.textContent='Sending…';status.textContent='';
   try{
-    await fetch(SHEET_URL,{method:'POST',mode:'no-cors',body:new FormData(form)});
+    const p=new URLSearchParams();
+    p.set('name',form.name.value);
+    p.set('email',form.email.value);
+    p.set('i_am_a',form.i_am_a.value);
+    p.set('message',form.message.value);
+    await fetch(SHEET_URL+'?'+p.toString(),{method:'GET',mode:'no-cors'});
     status.textContent='Message sent — we\u2019ll reply within 24 hours.';
     form.reset();
     btn.textContent='Sent ✓';
