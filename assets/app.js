@@ -67,4 +67,49 @@
       }
     });
   });
+
+  /* scroll progress hairline */
+  const bar = document.querySelector('.progress');
+  if (bar) {
+    const upd = () => {
+      const h = document.documentElement.scrollHeight - innerHeight;
+      bar.style.transform = 'scaleX(' + (h > 0 ? Math.min(scrollY / h, 1) : 0) + ')';
+    };
+    addEventListener('scroll', upd, { passive: true }); upd();
+  }
+
+  /* hero matching demo — briefs use only real creator facts (niche, city, platform) */
+  const match = document.querySelector('.match');
+  if (match) {
+    const briefs = [
+      { t: 'Lifestyle & ethnic wear · North India · Reels', k: ['ayantika'] },
+      { t: 'Fashion & fitness brand · Instagram Reels', k: ['utkarsh', 'vinod'] },
+      { t: 'Entertainment launch · YouTube + Instagram', k: ['shubham'] },
+    ];
+    const title = document.getElementById('mBrief');
+    const scan = match.querySelector('.m-scan');
+    const rows = [...match.querySelectorAll('.m-row')];
+    const show = b => {
+      rows.forEach(r => r.classList.toggle('on', b.k.includes(r.dataset.k)));
+      match.classList.remove('scanning'); match.classList.add('done');
+    };
+    if (reduce) { show(briefs[0]); }
+    else {
+      let i = 0, started = false;
+      const step = () => {
+        const b = briefs[i % briefs.length];
+        match.classList.remove('done'); match.classList.add('scanning');
+        title.classList.add('out');
+        scan.classList.remove('run'); void scan.offsetWidth;
+        setTimeout(() => { title.textContent = b.t; title.classList.remove('out'); scan.classList.add('run'); }, 350);
+        setTimeout(() => show(b), 1400);
+        i++;
+        setTimeout(step, 4600);
+      };
+      const ob = new IntersectionObserver(es => {
+        if (es[0].isIntersecting && !started) { started = true; step(); ob.disconnect(); }
+      }, { threshold: 0.3 });
+      ob.observe(match);
+    }
+  }
 })();
