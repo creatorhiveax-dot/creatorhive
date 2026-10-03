@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://creatorchahiye.com/</loc></url>
-  <url><loc>https://creatorchahiye.com/creators/</loc></url>
-  <url><loc>https://creatorchahiye.com/brands/</loc></url>
-  <url><loc>https://creatorchahiye.com/testimonials/</loc></url>
-  <url><loc>https://creatorchahiye.com/about/</loc></url>
-  <url><loc>https://creatorchahiye.com/contact/</loc></url>
-  <url><loc>https://creatorchahiye.com/join/brand/</loc></url>
-  <url><loc>https://creatorchahiye.com/join/creator/</loc></url>
+  <url><loc>https://creatorchahiye.com/</loc><lastmod>2026-10-03</lastmod></url>
+  <url><loc>https://creatorchahiye.com/brands/</loc><lastmod>2026-10-03</lastmod></url>
+  <url><loc>https://creatorchahiye.com/creators/</loc><lastmod>2026-10-03</lastmod></url>
+  <url><loc>https://creatorchahiye.com/guides/</loc><lastmod>2026-10-03</lastmod></url>
+  <url><loc>https://creatorchahiye.com/guides/influencer-marketing-cost-india/</loc><lastmod>2026-10-03</lastmod></url>
+  <url><loc>https://creatorchahiye.com/guides/how-to-choose-micro-influencers/</loc><lastmod>2026-10-03</lastmod></url>
+  <url><loc>https://creatorchahiye.com/guides/influencer-marketing-for-startups/</loc><lastmod>2026-10-03</lastmod></url>
+  <url><loc>https://creatorchahiye.com/guides/get-paid-brand-collaborations-instagram/</loc><lastmod>2026-10-03</lastmod></url>
+  <url><loc>https://creatorchahiye.com/join/brand/</loc><lastmod>2026-10-03</lastmod></url>
+  <url><loc>https://creatorchahiye.com/join/creator/</loc><lastmod>2026-10-03</lastmod></url>
+  <url><loc>https://creatorchahiye.com/testimonials/</loc><lastmod>2026-10-03</lastmod></url>
+  <url><loc>https://creatorchahiye.com/about/</loc><lastmod>2026-10-03</lastmod></url>
+  <url><loc>https://creatorchahiye.com/contact/</loc><lastmod>2026-10-03</lastmod></url>
 </urlset>
