@@ -482,3 +482,33 @@ body[data-page="home"] .tq .by{border-top:none;padding-top:0}
 }
 .sec-light + .sec{padding-top:96px!important}
 @media(max-width:640px){.sec-light + .sec{padding-top:64px!important}}
+
+/* ---- Home hero: big calm headline, glow, proof card at the bottom ---- */
+body[data-page="home"] .hero{align-items:stretch;padding:56px 0 44px;min-height:calc(100vh - 69px);
+  background:radial-gradient(1000px 560px at 0 -6%,rgba(255,106,0,.34),transparent 68%)}
+body[data-page="home"] .hero::before,body[data-page="home"] .hero .graf{display:none}
+body[data-page="home"] .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;column-gap:56px;row-gap:0;align-content:space-between;align-items:end}
+body[data-page="home"] .hero-copy{display:contents}
+body[data-page="home"] .hero-copy .kicker,body[data-page="home"] .hero-copy .h-xl{grid-column:1/-1}
+body[data-page="home"] .hero .h-xl{font-size:clamp(46px,8.2vw,124px);font-weight:700;letter-spacing:-.05em;line-height:.98;margin-bottom:clamp(40px,9vh,120px)}
+body[data-page="home"] .hero .h-xl .soft{color:rgba(250,247,242,.5)}
+body[data-page="home"] .hero .formerly,body[data-page="home"] .hero .sub,body[data-page="home"] .hero-cta,body[data-page="home"] .hero-foot{grid-column:1}
+body[data-page="home"] .hero-foot{border-top:none;margin-top:36px;padding-top:0}
+body[data-page="home"] .match{grid-column:2;grid-row:3 / span 4;align-self:end}
+@media(max-width:1000px){
+  body[data-page="home"] .hero{min-height:auto}
+  body[data-page="home"] .hero-grid{grid-template-columns:1fr}
+  body[data-page="home"] .hero-copy .kicker,body[data-page="home"] .hero-copy .h-xl,
+  body[data-page="home"] .hero .formerly,body[data-page="home"] .hero .sub,body[data-page="home"] .hero-cta,body[data-page="home"] .hero-foot,body[data-page="home"] .match{grid-column:1}
+  body[data-page="home"] .match{grid-row:auto;margin-top:36px}
+  body[data-page="home"] .hero .h-xl{margin-bottom:28px}
+}
+/* hero layout fix: left copy block + proof card share one bottom row */
+body[data-page="home"] .hero-grid{align-content:stretch;grid-template-rows:auto auto 1fr}
+body[data-page="home"] .hero-low{grid-column:1;grid-row:3;align-self:end}
+body[data-page="home"] .match{grid-column:2;grid-row:3;align-self:end}
+body[data-page="home"] .hero .formerly{margin:0 0 14px}
+body[data-page="home"] .hero .sub{margin-bottom:28px}
+@media(max-width:1000px){
+  body[data-page="home"] .hero-low,body[data-page="home"] .match{grid-column:1;grid-row:auto}
+}
