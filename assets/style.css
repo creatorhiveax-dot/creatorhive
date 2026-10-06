@@ -575,3 +575,16 @@ body[data-page="home"] .hero .sub{margin-bottom:28px}
   background:var(--tint);border:1px solid rgba(255,106,0,.35);color:var(--o2);font-weight:700;font-size:20px;letter-spacing:.02em}
 .cc .hd a{color:inherit;transition:color .2s}
 .cc .hd a:hover{color:var(--o2)}
+
+/* ---- home: at-a-glance stats band ---- */
+.sband{padding:8px 0 56px}
+.sb-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line2);border-radius:var(--r);overflow:hidden}
+.sb{padding:28px 26px;border-right:1px solid var(--line2)}
+.sb:last-child{border-right:none}
+.sb b{display:block;font-size:clamp(26px,3.4vw,40px);font-weight:800;letter-spacing:-.035em;line-height:1.05;margin-bottom:6px}
+.sb span{color:var(--dim);font-size:14px;line-height:1.45}
+@media(max-width:900px){.sb-grid{grid-template-columns:1fr 1fr}.sb:nth-child(2){border-right:none}.sb:nth-child(-n+2){border-bottom:1px solid var(--line2)}}
+@media(max-width:480px){.sb{padding:20px 16px}}
+.gcards-4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1000px){.gcards-4{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.gcards-4{grid-template-columns:1fr}}
