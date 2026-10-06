@@ -512,3 +512,25 @@ body[data-page="home"] .hero .sub{margin-bottom:28px}
 @media(max-width:1000px){
   body[data-page="home"] .hero-low,body[data-page="home"] .match{grid-column:1;grid-row:auto}
 }
+
+/* =========================================================
+   Site-wide: same editorial style as the home page
+   ========================================================= */
+:root{--r:14px;--dim:#BBB3A9;--faint:#8A8279}
+.kicker{color:var(--faint);letter-spacing:.14em}
+.kicker::before{display:none}
+.sec-light .kicker{color:#7A7168}
+.sec .h-lg,.sec .h-md{letter-spacing:-.03em;line-height:1.08}
+.sec .h-lg{font-size:clamp(32px,4.6vw,56px);max-width:820px}
+.sec .h-lg .accent,.sec .h-md .accent{color:inherit}
+.cta .h-md .accent{color:var(--o)}
+
+/* page headers: calm headline + top glow, no graffiti */
+.phead{padding:96px 0 72px;border-bottom:1px solid var(--line);
+  background:radial-gradient(900px 440px at 0 -10%,rgba(255,106,0,.28),transparent 68%)}
+.phead::before,.phead .graf{display:none}
+.phead .h-lg{font-size:clamp(40px,6.4vw,88px);font-weight:700;letter-spacing:-.05em;line-height:1}
+.phead .h-lg .accent{color:rgba(250,247,242,.5)}
+.phead .lede{margin-top:24px}
+.sec-light{padding-top:96px!important;padding-bottom:96px}
+@media(max-width:640px){.sec-light{padding-top:64px!important;padding-bottom:64px}}
