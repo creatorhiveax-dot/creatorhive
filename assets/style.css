@@ -429,3 +429,56 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:60px 0 30p
 .fm .bad{border-color:#ff4d4d !important;box-shadow:0 0 0 3px rgba(255,77,77,.15)}
 .fmsg.err{color:#ff6b6b}
 .fmsg a{color:inherit;text-decoration:underline}
+
+/* =========================================================
+   Home redesign (scoped to the home page only)
+   ========================================================= */
+body[data-page="home"]{--r:14px;--dim:#BBB3A9;--faint:#8A8279}
+body[data-page="home"] .kicker{color:var(--faint);letter-spacing:.14em;margin-bottom:16px}
+body[data-page="home"] .kicker::before{display:none}
+body[data-page="home"] .sec .h-lg{font-size:clamp(32px,4.6vw,56px);letter-spacing:-.03em;line-height:1.08;max-width:820px}
+body[data-page="home"] .sec .h-lg .accent{color:inherit}
+body[data-page="home"] .hero .graf{opacity:.22}
+body[data-page="home"] .hero::before{opacity:.6}
+body[data-page="home"] .hero-foot{margin-top:44px;border-top-color:var(--line2)}
+
+/* trust row replaces the scrolling logo marquee */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2);padding:26px 0;position:relative;z-index:2}
+.trust .wrap{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.trust p{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);flex:none}
+.trust-row{display:flex;gap:12px;flex-wrap:wrap}
+
+/* services as an editorial list */
+.svc{margin-top:44px;border-top:1px solid var(--line2)}
+.svc-row{display:grid;grid-template-columns:70px 1fr 1.3fr;gap:24px;align-items:baseline;padding:30px 4px;border-bottom:1px solid var(--line2);transition:background .3s,padding .3s var(--ease)}
+.svc-row:hover{background:rgba(255,255,255,.02);padding-left:14px}
+.svc-n{font-size:13px;font-weight:700;color:var(--o);letter-spacing:.1em}
+.svc-row h3{font-size:clamp(22px,2.4vw,30px);letter-spacing:-.025em}
+.svc-row p{color:var(--dim);font-size:15.5px;line-height:1.65}
+
+/* light section for rhythm */
+.sec-light{background:#F3EEE6;color:#16120F;--dim:#5C544C;--faint:#7A7168;--line:#E1D8CC;--line2:#D3C8BA}
+.sec-light .kicker{color:#7A7168}
+.sec-light .card{background:#fff;border:1px solid #E1D8CC;box-shadow:0 1px 2px rgba(22,18,15,.04)}
+.sec-light .sp li{color:#4A433C;border-bottom-color:#EAE2D7}
+.sec-light .btn-l{border-color:#BFB3A3;color:#16120F;background:transparent}
+.sec-light .btn-l:hover{border-color:var(--o);color:#C24E00}
+
+/* testimonial as an editorial quote */
+body[data-page="home"] .tw{display:block;margin-top:40px}
+body[data-page="home"] .tq{background:none;border:none;padding:0;max-width:900px;overflow:visible}
+body[data-page="home"] .tq::before{display:none}
+body[data-page="home"] .tq .mk{font-size:64px;margin-bottom:10px}
+body[data-page="home"] .tq p{font-size:clamp(20px,2.4vw,30px);line-height:1.4;font-weight:500;letter-spacing:-.015em}
+body[data-page="home"] .tq .by{border-top:none;padding-top:0}
+
+@media(max-width:900px){
+  .svc-row{grid-template-columns:44px 1fr;gap:6px 14px;padding:24px 2px}
+  .svc-row p{grid-column:2}
+}
+@media(max-width:640px){
+  .trust .wrap{gap:14px}
+  .trust-row{gap:8px}
+}
+.sec-light + .sec{padding-top:96px!important}
+@media(max-width:640px){.sec-light + .sec{padding-top:64px!important}}
