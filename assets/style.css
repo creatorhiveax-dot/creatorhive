@@ -564,3 +564,8 @@ body[data-page="home"] .hero .sub{margin-bottom:28px}
   .ph-card{margin-top:32px;padding:22px 20px}
   .ph-grid>.h-lg{margin-bottom:22px}
 }
+
+/* ---- refined list markers (replace text arrows and glyph icons) ---- */
+.sp li::before,.ph-card li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--o);margin-top:.72em;flex:none}
+.perks .ic{width:auto;min-width:28px;height:auto;background:none;border:none;border-radius:0;
+  font-size:12px;font-weight:600;letter-spacing:.12em;color:var(--o);padding-top:4px;justify-content:flex-start}
