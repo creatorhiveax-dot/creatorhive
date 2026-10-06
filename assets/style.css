@@ -534,3 +534,12 @@ body[data-page="home"] .hero .sub{margin-bottom:28px}
 .phead .lede{margin-top:24px}
 .sec-light{padding-top:96px!important;padding-bottom:96px}
 @media(max-width:640px){.sec-light{padding-top:64px!important;padding-bottom:64px}}
+
+/* ---- consistency: "light" sections now use the site's dark theme (slightly lifted panel) ---- */
+.sec-light{background:var(--bg2);color:var(--ink);--dim:#BBB3A9;--faint:#8A8279;--line:#2A2523;--line2:#3A3330;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sec-light .kicker{color:var(--faint)}
+.sec-light .card{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);box-shadow:none}
+.sec-light .sp li{color:var(--dim);border-bottom-color:var(--line)}
+.sec-light .btn-l{border-color:var(--line2);color:var(--ink);background:rgba(255,255,255,.02)}
+.sec-light .btn-l:hover{border-color:var(--o);color:var(--o2)}
