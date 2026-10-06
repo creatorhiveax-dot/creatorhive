@@ -543,3 +543,24 @@ body[data-page="home"] .hero .sub{margin-bottom:28px}
 .sec-light .sp li{color:var(--dim);border-bottom-color:var(--line)}
 .sec-light .btn-l{border-color:var(--line2);color:var(--ink);background:rgba(255,255,255,.02)}
 .sec-light .btn-l:hover{border-color:var(--o);color:var(--o2)}
+
+/* ---- inner page headers: headline on top, text + proof card in the bottom row ---- */
+.ph-grid{display:grid;grid-template-columns:1.15fr .85fr;column-gap:56px}
+.ph-grid>.crumbs,.ph-grid>.kicker,.ph-grid>.h-lg{grid-column:1/-1}
+.ph-grid>.h-lg{margin-bottom:clamp(28px,6vh,64px)}
+.ph-grid>.lede{grid-column:1;align-self:end;margin-top:0}
+.ph-card{grid-column:2;align-self:end;background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
+.ph-t{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:6px}
+.ph-card ul{list-style:none;margin:0 0 4px}
+.ph-card li{padding:11px 0;color:var(--dim);font-size:15px;display:flex;gap:12px;border-bottom:1px solid var(--line)}
+.ph-card li:last-child{border-bottom:none}
+.ph-card li::before{content:"→";color:var(--o);font-weight:700;flex:none}
+.ph-card li a{color:var(--ink);transition:color .2s}
+.ph-card li a:hover{color:var(--o2)}
+.ph-card .btn{margin-top:14px}
+@media(max-width:1000px){
+  .ph-grid{grid-template-columns:1fr}
+  .ph-grid>.lede,.ph-card{grid-column:1}
+  .ph-card{margin-top:32px;padding:22px 20px}
+  .ph-grid>.h-lg{margin-bottom:22px}
+}
