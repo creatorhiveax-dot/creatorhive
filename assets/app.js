@@ -46,12 +46,33 @@
     eb.addEventListener('change', run); et.addEventListener('change', run); run();
   }
 
+  document.addEventListener('input', e => { if (e.target.classList) e.target.classList.remove('bad'); });
+
   /* forms -> Google Sheet (brand leads / creators routed by form_type) */
   document.querySelectorAll('form[data-type]').forEach(form => {
     form.addEventListener('submit', async e => {
       e.preventDefault();
       if (form._hp && form._hp.value) return;
       const btn = form.querySelector('button[type=submit]'), msg = form.querySelector('.fmsg');
+      /* validate: form is novalidate, so check fields ourselves */
+      msg.classList.remove('err');
+      let bad = null;
+      form.querySelectorAll('input,select,textarea').forEach(f => {
+        if (f.name === '_hp') return;
+        const v = f.value.trim();
+        let ok = !(f.required && !v);
+        if (ok && v && f.type === 'email') ok = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+        if (ok && v && f.type === 'tel') ok = v.replace(/\D/g, '').length >= 10;
+        f.classList.toggle('bad', !ok);
+        if (!ok && !bad) bad = f;
+      });
+      if (bad) {
+        msg.classList.add('err');
+        msg.textContent = bad.type === 'email' && bad.value ? 'Please enter a valid email.' :
+          bad.type === 'tel' && bad.value ? 'Please enter a valid 10-digit phone number.' : 'Please fill in the highlighted fields.';
+        bad.focus();
+        return;
+      }
       const label = btn.innerHTML;
       btn.disabled = true; btn.textContent = 'Sending…'; msg.textContent = '';
       try {
@@ -62,7 +83,8 @@
         msg.textContent = form.dataset.ok;
         form.reset(); btn.textContent = 'Sent ✓';
       } catch (err) {
-        msg.textContent = 'Something went wrong. Email karan@creatorchahiye.com';
+        msg.classList.add('err');
+        msg.innerHTML = 'Something went wrong. <a href="https://wa.me/917065555395" target="_blank" rel="noopener">WhatsApp us</a> or email karan@creatorchahiye.com';
         btn.disabled = false; btn.innerHTML = label;
       }
     });
