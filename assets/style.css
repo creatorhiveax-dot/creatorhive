@@ -588,3 +588,80 @@ body[data-page="home"] .hero .sub{margin-bottom:28px}
 .gcards-4{grid-template-columns:repeat(4,1fr)}
 @media(max-width:1000px){.gcards-4{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.gcards-4{grid-template-columns:1fr}}
+
+/* =========================================================
+   Mobile polish (phones)
+   ========================================================= */
+html{-webkit-tap-highlight-color:transparent}
+a,button,summary,select{touch-action:manipulation}
+@media(max-width:640px){
+  /* rhythm: less empty space, shorter pages */
+  .sec{padding:52px 0}
+  .sec-light{padding-top:48px!important;padding-bottom:48px}
+  .sec-light + .sec{padding-top:48px!important}
+  .sec[style*="padding-top:0"]{padding-top:0!important}
+  .phead{padding:64px 0 44px}
+  .hero{padding:40px 0 44px}
+  .sband{padding:0 0 36px}
+  footer{padding:44px 0 90px}
+  h1.h-xl{letter-spacing:-.045em}
+
+  /* touch targets: at least ~44px */
+  .btn{min-height:46px}
+  .btn-sm{min-height:44px;padding:11px 18px}
+  .fgrid a{padding:12px 0;margin:0;font-size:15.5px}
+  .fgrid h4{margin-bottom:6px}
+  .fbot{gap:8px}
+  .cc .hd a{display:inline-block;padding:9px 0;margin:-9px 0}
+  .m-foot a{display:inline-block;padding:10px 0}
+  .crumbs a{display:inline-block;padding:10px 0;margin:-10px 0}
+  .faq summary{min-height:52px;padding-top:14px;padding-bottom:14px}
+  .links a,.tabs a{min-height:44px}
+  .gcard .more{display:inline-block;padding:8px 0}
+
+  /* forms: 16px stops iOS zooming into fields */
+  input,select,textarea{font-size:16px;min-height:50px}
+  textarea{min-height:120px}
+  label{font-size:14px}
+
+  /* horizontal swipe rows */
+  .mcar{display:flex!important;gap:12px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;
+    margin-left:-18px;margin-right:-18px;padding:4px 18px 16px;scroll-padding-left:18px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .mcar::-webkit-scrollbar{display:none}
+  .mcar>*{flex:0 0 80%;max-width:320px;scroll-snap-align:start}
+
+  /* compact creator cards (directory pages) */
+  .crew:not(.mcar){gap:10px;margin-top:28px}
+  .crew:not(.mcar) .cc{padding:16px}
+  .crew:not(.mcar) .cc-top{margin-bottom:10px}
+  .crew:not(.mcar) .cc .nt{display:none}
+  .crew:not(.mcar) .cc .nums{margin-bottom:0}
+  .crew:not(.mcar) .cc .tag{margin-bottom:10px}
+  .cc-av,.cc-av.ini{width:48px;height:48px}
+
+  /* floating WhatsApp: respect the home indicator on iPhones */
+  .wa{right:max(10px,env(safe-area-inset-right));bottom:max(10px,env(safe-area-inset-bottom))}
+}
+@media(max-width:360px){
+  .wrap{padding:0 14px}
+  .h-lg{font-size:clamp(30px,9vw,40px)}
+  .sb b{font-size:24px}
+}
+.chips-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+@media(max-width:640px){
+  .chips-row{flex-wrap:nowrap;overflow-x:auto;margin-left:-18px;margin-right:-18px;padding:2px 18px 10px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .chips-row::-webkit-scrollbar{display:none}
+  .chips-row>*{flex:none;white-space:nowrap}
+  .cc .hd a{padding:12px 0;margin:-12px 0}
+}
+@media(max-width:640px){
+  /* WhatsApp button must not cover copy: keep a right gutter on text-heavy lists */
+  .perks li>div,.art p,.art li{padding-right:6px}
+  .perks{margin-right:0}
+}
+@media(max-width:640px){
+  /* text links inside lists/paragraphs: bigger touch area without changing layout */
+  .ph-card li a,.art li a,.perks a,.note a{display:inline-block;padding:10px 0;margin:-10px 0}
+  .ci a,.card.ci{min-height:56px}
+  .ci .vl{padding:6px 0}
+}
