@@ -665,3 +665,6 @@ a,button,summary,select{touch-action:manipulation}
   .ci a,.card.ci{min-height:56px}
   .ci .vl{padding:6px 0}
 }
+.fgrid{grid-template-columns:1.4fr 1fr 1fr 1fr 1fr}
+@media(max-width:900px){.fgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.fgrid{grid-template-columns:1fr 1fr;gap:20px 16px}.fgrid>div:first-child{grid-column:1/-1}}
