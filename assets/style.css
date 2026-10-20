@@ -696,3 +696,21 @@ summary:focus-visible{outline:2px solid var(--o);outline-offset:4px;border-radiu
 /* skip link */
 .skip{position:absolute;left:12px;top:-60px;z-index:300;background:var(--o);color:#0A0908;font-weight:700;padding:10px 16px;border-radius:10px;transition:top .2s}
 .skip:focus{top:12px}
+
+/* client logo chips: logos sized consistently inside the white circle */
+.lc-ic img{width:30px;height:30px;object-fit:contain;max-width:none}
+@media(max-width:640px){.lc-ic img{width:24px;height:24px}}
+
+/* pricing cards (Brands) */
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.price{display:flex;flex-direction:column;gap:10px;padding:28px 26px;transition:border-color .25s,transform .25s var(--ease)}
+.price:hover{border-color:var(--o);transform:translateY(-3px)}
+.price .pt{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.price .pv{font-size:clamp(30px,3.4vw,40px);font-weight:800;letter-spacing:-.035em;line-height:1.05}
+.price .pv small{font-size:14px;font-weight:500;color:var(--dim);letter-spacing:0;margin-right:4px}
+.price .pd{color:var(--dim);font-size:14.5px;line-height:1.6;flex:1}
+.price .more{color:var(--o2);font-weight:600;font-size:14.5px}
+.price-hl{border-color:rgba(255,106,0,.45);background:linear-gradient(180deg,rgba(255,106,0,.08),var(--card))}
+@media(max-width:900px){.prices{grid-template-columns:1fr}}
+/* inner page headers: keep the intro close to the headline */
+@media(min-width:1001px){.ph-grid>.lede,.ph-card{align-self:start}}
