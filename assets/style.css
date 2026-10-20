@@ -682,3 +682,17 @@ a,button,summary,select{touch-action:manipulation}
 @media(min-width:1001px){
   body[data-page="home"] .hero-low,body[data-page="home"] .match{align-self:start}
 }
+
+/* =========================================================
+   Accessibility pass (WCAG 2.2 AA)
+   ========================================================= */
+/* form fields: visible boundary (3:1) and readable placeholders (4.5:1) */
+input,select,textarea{border-color:#6B625A}
+input::placeholder,textarea::placeholder{color:var(--faint);opacity:1}
+input[aria-invalid="true"],select[aria-invalid="true"],textarea[aria-invalid="true"]{border-color:#FF6B6B}
+/* keyboard focus on accordions and swipe rows */
+summary:focus-visible{outline:2px solid var(--o);outline-offset:4px;border-radius:6px}
+.mcar:focus-visible{outline:2px solid var(--o);outline-offset:4px}
+/* skip link */
+.skip{position:absolute;left:12px;top:-60px;z-index:300;background:var(--o);color:#0A0908;font-weight:700;padding:10px 16px;border-radius:10px;transition:top .2s}
+.skip:focus{top:12px}
