@@ -15,6 +15,11 @@
       const open = document.body.classList.toggle('menu-open');
       burger.setAttribute('aria-expanded', open);
     });
+    addEventListener('keydown', e => {
+      if (e.key === 'Escape' && document.body.classList.contains('menu-open')) {
+        document.body.classList.remove('menu-open'); burger.setAttribute('aria-expanded', false); burger.focus();
+      }
+    });
     document.querySelectorAll('.mobile a').forEach(a =>
       a.addEventListener('click', () => document.body.classList.remove('menu-open')));
   }
@@ -46,7 +51,7 @@
     eb.addEventListener('change', run); et.addEventListener('change', run); run();
   }
 
-  document.addEventListener('input', e => { if (e.target.classList) e.target.classList.remove('bad'); });
+  document.addEventListener('input', e => { if (e.target.classList) { e.target.classList.remove('bad'); e.target.removeAttribute('aria-invalid'); } });
 
   /* forms -> Google Sheet (brand leads / creators routed by form_type) */
   document.querySelectorAll('form[data-type]').forEach(form => {
@@ -64,6 +69,7 @@
         if (ok && v && f.type === 'email') ok = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
         if (ok && v && f.type === 'tel') ok = v.replace(/\D/g, '').length >= 10;
         f.classList.toggle('bad', !ok);
+        if (ok) f.removeAttribute('aria-invalid'); else f.setAttribute('aria-invalid', 'true');
         if (!ok && !bad) bad = f;
       });
       if (bad) {
