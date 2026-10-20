@@ -668,3 +668,17 @@ a,button,summary,select{touch-action:manipulation}
 .fgrid{grid-template-columns:1.4fr 1fr 1fr 1fr 1fr}
 @media(max-width:900px){.fgrid{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.fgrid{grid-template-columns:1fr 1fr;gap:20px 16px}.fgrid>div:first-child{grid-column:1/-1}}
+
+/* hero trust line */
+.hero-trust{list-style:none;display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;padding:0}
+.hero-trust li{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--dim)}
+.hero-trust li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--o);flex:none}
+@media(max-width:640px){.hero-trust{gap:8px 14px;margin-top:18px}.hero-trust li{font-size:13px}}
+/* hero: tighter on desktop so text sits closer to the headline */
+@media(min-width:1001px){
+  body[data-page="home"] .hero{min-height:auto;padding:72px 0 64px}
+  body[data-page="home"] .hero .h-xl{margin-bottom:44px}
+}
+@media(min-width:1001px){
+  body[data-page="home"] .hero-low,body[data-page="home"] .match{align-self:start}
+}
