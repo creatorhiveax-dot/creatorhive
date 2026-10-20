@@ -714,3 +714,6 @@ summary:focus-visible{outline:2px solid var(--o);outline-offset:4px;border-radiu
 @media(max-width:900px){.prices{grid-template-columns:1fr}}
 /* inner page headers: keep the intro close to the headline */
 @media(min-width:1001px){.ph-grid>.lede,.ph-card{align-self:start}}
+.prices{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1100px){.prices{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.prices{grid-template-columns:1fr}}
