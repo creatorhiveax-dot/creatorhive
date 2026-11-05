@@ -721,3 +721,6 @@ summary:focus-visible{outline:2px solid var(--o);outline-offset:4px;border-radiu
 /* footer emails: wrap on narrow phones */
 footer a[href^="mailto:"]{overflow-wrap:anywhere}
 @media(max-width:360px){.mcar,.chips-row{margin-left:-14px;margin-right:-14px;padding-left:14px;padding-right:14px;scroll-padding-left:14px}}
+
+/* homepage: brands in conversation (not yet clients) */
+.trust p.talks{margin:0;font-size:13px;font-weight:400;letter-spacing:0;text-transform:none;color:var(--faint);flex-basis:100%}
