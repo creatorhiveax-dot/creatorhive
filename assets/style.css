@@ -723,4 +723,10 @@ footer a[href^="mailto:"]{overflow-wrap:anywhere}
 @media(max-width:360px){.mcar,.chips-row{margin-left:-14px;margin-right:-14px;padding-left:14px;padding-right:14px;scroll-padding-left:14px}}
 
 /* homepage: brands in conversation (not yet clients) */
-.trust p.talks{margin:0;font-size:13px;font-weight:400;letter-spacing:0;text-transform:none;color:var(--faint);flex-basis:100%}
+.talks{display:block;margin:18px 0 0;font-size:15px;line-height:1.6;color:var(--dim)}
+.talks b,.talks a{color:var(--ink);font-weight:600;white-space:nowrap}
+.talks a{text-decoration:underline;text-decoration-color:var(--line2);text-underline-offset:3px}
+.talks a:hover{text-decoration-color:var(--o)}
+.tk-dot{display:inline-block;vertical-align:middle;margin:-2px 10px 0 4px;width:8px;height:8px;border-radius:50%;background:var(--o);box-shadow:0 0 0 4px rgba(255,106,0,.18)}
+.trust p.talks{margin:2px 0 0;font-size:15px;font-weight:400;letter-spacing:0;text-transform:none;color:var(--dim);flex-basis:100%}
+.art .talks{margin:0 0 28px;padding:14px 18px;border:1px solid var(--line);border-radius:var(--r);background:var(--card)}
