@@ -730,3 +730,27 @@ footer a[href^="mailto:"]{overflow-wrap:anywhere}
 .tk-dot{display:inline-block;vertical-align:middle;margin:-2px 10px 0 4px;width:8px;height:8px;border-radius:50%;background:var(--o);box-shadow:0 0 0 4px rgba(255,106,0,.18)}
 .trust p.talks{margin:2px 0 0;font-size:15px;font-weight:400;letter-spacing:0;text-transform:none;color:var(--dim);flex-basis:100%}
 .art .talks{margin:0 0 28px;padding:14px 18px;border:1px solid var(--line);border-radius:var(--r);background:var(--card)}
+
+/* ---------- UX pass: forms, work logos, mobile footer ---------- */
+/* forms first on phones; the steps are already in the header card */
+@media(max-width:900px){
+  .fwrap>form{order:-1}
+  .phead + .sec .fwrap{margin-top:-24px}
+}
+/* work rows: logos on a light tile so dark marks stay visible */
+.row .lg{width:72px;height:72px;justify-content:center;background:#F4EFE8;border-radius:16px;padding:12px}
+.row .lg img{opacity:1}
+@media(max-width:640px){.row .lg{width:56px;height:56px;border-radius:14px;padding:9px}}
+/* mobile footer: collapsible link groups */
+.fgrid h4.fc-t{cursor:pointer;display:flex;align-items:center;justify-content:space-between;margin-bottom:0;padding:14px 0;border-bottom:1px solid var(--line)}
+.fgrid h4.fc-t::after{content:"+";font-size:18px;font-weight:400;color:var(--o2);letter-spacing:0}
+.fgrid h4.fc-t[aria-expanded="true"]::after{content:"\2212"}
+.fgrid h4.fc-t[aria-expanded="true"]{border-bottom-color:transparent}
+.fgrid .fc-closed a{display:none}
+.fgrid .fc-open a:first-of-type{margin-top:4px}
+.row .lg:has(img[alt="Marg"]){background:var(--card2);border:1px solid var(--line)}
+@media(max-width:640px){
+  .fgrid{grid-template-columns:1fr;gap:0}
+  .fgrid>div:first-child{margin-bottom:22px}
+  .fgrid>div:last-child{margin-top:26px}
+}
