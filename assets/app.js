@@ -90,7 +90,7 @@
         form.reset(); btn.textContent = 'Sent ✓';
       } catch (err) {
         msg.classList.add('err');
-        msg.innerHTML = 'Something went wrong. <a href="https://wa.me/917065555395" target="_blank" rel="noopener">WhatsApp us</a> or email karan@creatorchahiye.com';
+        msg.innerHTML = 'Something went wrong. <a href="https://wa.me/917065555395" target="_blank" rel="noopener">WhatsApp us</a> or email marketing@creatorchahiye.com';
         btn.disabled = false; btn.innerHTML = label;
       }
     });
