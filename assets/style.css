@@ -754,3 +754,10 @@ footer a[href^="mailto:"]{overflow-wrap:anywhere}
   .fgrid>div:first-child{margin-bottom:22px}
   .fgrid>div:last-child{margin-top:26px}
 }
+
+/* ---------- calmer details: shorter reveal, softer header glow ---------- */
+@media(prefers-reduced-motion:no-preference){
+  .rv{transform:translateY(10px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+}
+body[data-page="home"] .hero{background:radial-gradient(1000px 560px at 0 -6%,rgba(255,106,0,.22),transparent 68%)}
+.phead{background:radial-gradient(900px 440px at 0 -10%,rgba(255,106,0,.16),transparent 68%)}
