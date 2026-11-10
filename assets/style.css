@@ -774,3 +774,11 @@ body[data-page="home"] .tw{display:grid;grid-template-columns:1fr 1fr;gap:56px}
 body[data-page="home"] .tq{max-width:none}
 body[data-page="home"] .tq p{font-size:clamp(18px,1.7vw,23px);line-height:1.5}
 @media(max-width:900px){body[data-page="home"] .tw{grid-template-columns:1fr;gap:44px}}
+
+/* Brands page: brands in conversation, with a short line on each */
+.talks-block{margin-top:56px}
+.talks-h{display:flex;align-items:center;gap:2px;font-size:clamp(20px,2.2vw,26px);letter-spacing:-.025em;margin-bottom:-20px}
+.row .lg.lg-round{padding:6px}
+.row .lg.lg-round img{border-radius:50%}
+.row .lg.lg-ini{background:var(--card2);border:1px solid var(--line2);color:var(--ink);font-weight:700;font-size:18px;letter-spacing:.02em}
+a.lchip{cursor:pointer}
