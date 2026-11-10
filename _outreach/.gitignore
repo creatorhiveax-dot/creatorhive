@@ -1,0 +1,6 @@
+# Private data: never commit these
+.env
+leads.csv
+leads.csv.bak
+*.log
+__pycache__/
