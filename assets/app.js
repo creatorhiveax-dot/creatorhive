@@ -140,6 +140,19 @@
       ob.observe(match);
     }
   }
+  /* swipe rows: mark which edge still has content, so CSS can fade it */
+  document.querySelectorAll('.mcar, .chips-row').forEach(el => {
+    const mark = () => {
+      const max = el.scrollWidth - el.clientWidth;
+      el.classList.toggle('sw-none', max < 4);
+      el.classList.toggle('sw-mid', max >= 4 && el.scrollLeft > 4 && el.scrollLeft < max - 4);
+      el.classList.toggle('sw-end', max >= 4 && el.scrollLeft >= max - 4);
+    };
+    el.addEventListener('scroll', mark, { passive: true });
+    addEventListener('resize', mark, { passive: true });
+    mark();
+  });
+
   /* mobile footer: link groups collapse into tap-to-open rows; Connect stays open */
   const fmq = window.matchMedia('(max-width:640px)');
   const fgroups = [...document.querySelectorAll('.fgrid > div')].filter(d => {
