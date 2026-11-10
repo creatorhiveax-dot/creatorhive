@@ -839,3 +839,15 @@ body[data-page="contact"] .path p:not(.kicker){font-size:16.5px;max-width:46ch}
   .cl{grid-template-columns:1fr auto;grid-template-areas:"l a" "v v"}
   .cl-l{grid-area:l;grid-column:auto}.cl-a{grid-area:a}.cl-v{grid-area:v;font-size:clamp(18px,5.2vw,22px);overflow-wrap:normal}
 }
+
+/* card grids: borders sit on the cards, so an unfilled last row shows
+   the page background instead of a grey block */
+.gcards,.prices,.ci-grid,.paths,.crew,body:not([data-page="home"]) .tw{gap:0;background:transparent;border:0;border-radius:0;overflow:visible;padding:0 1px 1px 0}
+.gcards>.card,.prices>.card,.ci-grid>.card,.paths>.card,.crew>.card,body:not([data-page="home"]) .tw>.card{border:1px solid var(--line);border-radius:0;margin:0 -1px -1px 0}
+/* split layouts hold text next to a card: no panel behind them */
+.split{gap:20px;background:none;border:0;border-radius:0;overflow:visible}
+.split>.card{border:1px solid var(--line);border-radius:10px}
+@media(max-width:640px){
+  .gcards.mcar,.crew.mcar{padding:0 18px 16px}
+  .gcards.mcar>.card,.crew.mcar>.card{margin:0;border-radius:10px}
+}
