@@ -782,3 +782,60 @@ body[data-page="home"] .tq p{font-size:clamp(18px,1.7vw,23px);line-height:1.5}
 .row .lg.lg-round img{border-radius:50%}
 .row .lg.lg-ini{background:var(--card2);border:1px solid var(--line2);color:var(--ink);font-weight:700;font-size:18px;letter-spacing:.02em}
 a.lchip{cursor:pointer}
+
+/* =========================================================
+   Cards: one quiet panel with shared hairlines instead of
+   floating gradient boxes that lift and glow on hover
+   ========================================================= */
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:10px;box-shadow:none;transition:background .35s var(--ease),border-color .35s var(--ease)}
+.card:hover{transform:none;box-shadow:none;border-color:var(--line2);background:#16120F}
+.card h3,.cl-v{transition:transform .35s var(--ease)}
+.card:hover h3{transform:translateX(4px)}
+.gcards,.prices,.ci-grid,.paths,.crew,.split,body:not([data-page="home"]) .tw{gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.gcards>.card,.prices>.card,.ci-grid>.card,.paths>.card,.crew>.card,.split>.card,body:not([data-page="home"]) .tw>.card{border:0;border-radius:0;background:var(--bg2)}
+.gcards>.card:hover,.prices>.card:hover,.ci-grid>.card:hover,.paths>.card:hover,.crew>.card:hover,.split>.card:hover{background:#16120F}
+.price:hover{transform:none}
+.price-hl{background:var(--bg2);box-shadow:inset 0 2px 0 var(--o)}
+.gtag,.cc .tag{background:transparent;border:0;padding:0;border-radius:0;color:var(--faint);display:inline-flex;align-items:center;gap:8px}
+.gtag::before,.cc .tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--o);flex:none}
+.ph-card,.inshort{background:var(--bg2)}
+.match{background:var(--bg2);backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none}
+.cta{background:var(--bg2);border-color:var(--line2)}
+.cta::before{opacity:.14}
+@media(max-width:640px){
+  .gcards.mcar,.crew.mcar{background:transparent;border:0;border-radius:0;overflow-x:auto;gap:12px}
+  .gcards.mcar>.card,.crew.mcar>.card{border:1px solid var(--line);border-radius:10px}
+}
+
+/* =========================================================
+   Contact page
+   ========================================================= */
+body[data-page="contact"] .path{padding:clamp(32px,4vw,56px)}
+body[data-page="contact"] .path h3{font-size:clamp(30px,3.6vw,48px);letter-spacing:-.035em}
+body[data-page="contact"] .path p:not(.kicker){font-size:16.5px;max-width:46ch}
+.clist{margin-top:36px;border-top:1px solid var(--line2)}
+.cl{display:grid;grid-template-columns:220px 1fr auto;gap:24px;align-items:center;padding:26px 6px;border-bottom:1px solid var(--line2);transition:background .35s var(--ease),padding .35s var(--ease)}
+.cl:hover{background:rgba(255,255,255,.025);padding-left:14px}
+.cl-l{font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+.cl-v{font-size:clamp(22px,2.8vw,38px);font-weight:700;letter-spacing:-.03em;line-height:1.15;overflow-wrap:anywhere}
+.cl:hover .cl-v{transform:translateX(4px);color:var(--o2)}
+.cl-a{font-size:14px;font-weight:600;color:var(--dim);display:inline-flex;align-items:center;gap:8px}
+.cl-a::after{content:"↗";color:var(--o);transition:transform .35s var(--ease)}
+.cl:hover .cl-a::after{transform:translate(2px,-2px)}
+.reg{border:1px solid var(--line);border-radius:12px;padding:28px;background:var(--bg2)}
+.reg-t{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:18px}
+.reg-g{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px}
+.reg-g span{display:block;font-size:13px;color:var(--faint);margin-bottom:4px}
+.reg-g b{font-size:16px;font-weight:600;color:var(--ink);overflow-wrap:anywhere}
+@media(max-width:900px){.reg-g{grid-template-columns:1fr}}
+@media(max-width:640px){
+  .cl{grid-template-columns:1fr auto;gap:6px 16px;padding:20px 2px}
+  .cl-l{grid-column:1/-1}
+  .cl:hover{padding-left:6px}
+}
+/* footer: give the Connect column room so the emails stay on one line */
+@media(min-width:901px){.fgrid{grid-template-columns:1.3fr 1fr 1fr 1fr 1.45fr}footer a[href^="mailto:"]{overflow-wrap:normal}}
+@media(max-width:640px){
+  .cl{grid-template-columns:1fr auto;grid-template-areas:"l a" "v v"}
+  .cl-l{grid-area:l;grid-column:auto}.cl-a{grid-area:a}.cl-v{grid-area:v;font-size:clamp(18px,5.2vw,22px);overflow-wrap:normal}
+}
