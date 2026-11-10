@@ -761,3 +761,16 @@ footer a[href^="mailto:"]{overflow-wrap:anywhere}
 }
 body[data-page="home"] .hero{background:radial-gradient(1000px 560px at 0 -6%,rgba(255,106,0,.22),transparent 68%)}
 .phead{background:radial-gradient(900px 440px at 0 -10%,rgba(255,106,0,.16),transparent 68%)}
+
+/* homepage: brands in conversation, shown as logo chips under the client row */
+.talks-row{flex-basis:100%;display:flex;align-items:center;gap:14px 28px;flex-wrap:wrap;padding-top:18px;border-top:1px dashed var(--line)}
+.lc-ic.lc-fill{background:transparent}
+.lc-ic.lc-fill img{width:100%;height:100%;object-fit:cover}
+.lc-ic.lc-ini{background:var(--card2);border:1px solid var(--line2);color:var(--ink);font-size:12px;font-weight:700;letter-spacing:.02em}
+@media(max-width:640px){.lc-ic.lc-fill img{width:100%;height:100%}}
+
+/* homepage: two client quotes side by side */
+body[data-page="home"] .tw{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+body[data-page="home"] .tq{max-width:none}
+body[data-page="home"] .tq p{font-size:clamp(18px,1.7vw,23px);line-height:1.5}
+@media(max-width:900px){body[data-page="home"] .tw{grid-template-columns:1fr;gap:44px}}
