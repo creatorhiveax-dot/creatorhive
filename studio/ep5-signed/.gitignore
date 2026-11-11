@@ -1,0 +1,8 @@
+# render outputs (regenerate with render.py / sound.py)
+fr/
+pv/
+stills/
+seg/
+sound.wav
+*.mp4
+__pycache__/
