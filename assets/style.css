@@ -860,3 +860,14 @@ body[data-page="contact"] .path h2{font-size:clamp(30px,3.6vw,48px);letter-spaci
 .gh{margin:0 0 6px}
 .gcards + .gh{margin-top:72px}
 @media(max-width:640px){.gcards + .gh{margin-top:48px}}
+
+/* UX audit: breathing room above the stats band */
+.sband{padding:28px 0 56px}
+@media(max-width:640px){.sband{padding:20px 0 36px}}
+/* tables that scroll sideways on phones show a fade on the edge that has more */
+.tbl{background:
+  linear-gradient(90deg,var(--bg) 30%,transparent) left/28px 100% no-repeat local,
+  linear-gradient(270deg,var(--bg) 30%,transparent) right/28px 100% no-repeat local,
+  linear-gradient(90deg,rgba(255,106,0,.28),transparent) left/14px 100% no-repeat scroll,
+  linear-gradient(270deg,rgba(255,106,0,.28),transparent) right/14px 100% no-repeat scroll}
+.tbl th{background:transparent}
