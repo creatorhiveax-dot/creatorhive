@@ -871,3 +871,6 @@ body[data-page="contact"] .path h2{font-size:clamp(30px,3.6vw,48px);letter-spaci
   linear-gradient(90deg,rgba(255,106,0,.28),transparent) left/14px 100% no-repeat scroll,
   linear-gradient(270deg,rgba(255,106,0,.28),transparent) right/14px 100% no-repeat scroll}
 .tbl th{background:transparent}
+
+/* pricing: six services, three per row on desktop */
+@media(min-width:1101px){.prices{grid-template-columns:repeat(3,1fr)}}
