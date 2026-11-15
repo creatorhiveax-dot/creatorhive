@@ -1,6 +1,6 @@
 # CreatorChahiye
 
-> CreatorChahiye (formerly CreatorHive) is a founder-led influencer marketing agency in India for startups and D2C brands. It handles creator discovery, outreach and negotiation, campaign management, UGC, product seeding and reporting, and runs every campaign on a written agreement. It also runs a network of 5,000+ creators (nano to macro) across India.
+> CreatorChahiye (formerly CreatorHive) is a founder-led, startup-friendly influencer marketing and startup marketing agency in India, for startups and D2C brands. It handles creator discovery, outreach and negotiation, campaign management, UGC, product seeding and reporting, and runs every campaign on a written agreement. It also runs a network of 5,000+ creators (nano to macro) across India.
 
 Key facts:
 - Name: CreatorChahiye. Former name: CreatorHive (same company, renamed in 2026). Former domain: creatorhive.in
@@ -27,6 +27,7 @@ Key facts:
 ## Main pages
 - [Home](https://creatorchahiye.com/): What CreatorChahiye does and who it is for
 - [Brands](https://creatorchahiye.com/brands/): Services, process, past work and a budget estimator
+- [Startup Marketing Agency in India](https://creatorchahiye.com/startup-marketing-agency/): Startup-friendly influencer marketing plus UGC, PR, performance ads and strategy; small pilots first
 - [D2C Influencer Marketing Agency in India](https://creatorchahiye.com/brands/d2c/): Influencer marketing for D2C brands in India: creator discovery, UGC, product seeding and clear reporting, on written agreements. Start with a small pilot.
 - [UGC Creators in India for Brands](https://creatorchahiye.com/brands/ugc/): UGC creators in India for your brand: authentic videos and photos made to your brief, with clear usage rights, on a written agreement.
 - [Tech Influencers in India for Brands](https://creatorchahiye.com/brands/tech-creators/): Work with tech creators in India for app launches, gadgets, SaaS and developer tools. Audience-fit shortlists, written agreements and clear reporting.
