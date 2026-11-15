@@ -874,3 +874,19 @@ body[data-page="contact"] .path h2{font-size:clamp(30px,3.6vw,48px);letter-spaci
 
 /* pricing: six services, three per row on desktop */
 @media(min-width:1101px){.prices{grid-template-columns:repeat(3,1fr)}}
+
+/* latest work: vertical reel next to its story */
+.reel{display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:clamp(28px,4vw,56px);align-items:center;margin:40px 0 8px;padding:clamp(20px,2.4vw,32px);border:1px solid var(--line);border-radius:12px;background:var(--bg2)}
+.reel-v{aspect-ratio:9/16;border-radius:10px;overflow:hidden;background:#000;border:1px solid var(--line2)}
+.reel-v video{width:100%;height:100%;object-fit:cover;display:block}
+.reel-t h3{font-size:clamp(24px,2.6vw,34px);letter-spacing:-.03em;margin-bottom:12px}
+.reel-t>p{color:var(--dim);font-size:16px;line-height:1.65;max-width:56ch}
+.reel-t ul{list-style:none;margin:18px 0 22px;border-top:1px solid var(--line)}
+.reel-t li{padding:10px 0;border-bottom:1px solid var(--line);color:var(--dim);font-size:14.5px}
+.reel-t li a{color:var(--ink)}
+.reel-t .r{display:flex;gap:10px;flex-wrap:wrap}
+.art .reel{grid-template-columns:minmax(180px,240px) 1fr;margin:24px 0}
+@media(max-width:700px){
+  .reel,.art .reel{grid-template-columns:1fr}
+  .reel-v{max-width:300px;margin:0 auto;width:100%}
+}
