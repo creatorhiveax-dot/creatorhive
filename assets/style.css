@@ -939,3 +939,4 @@ body[data-page="contact"] .path h2{font-size:clamp(30px,3.6vw,48px);letter-spaci
   .ph-grid>.ph-img{order:1;margin-top:28px}
   .ph-grid>.ph-card{order:2}
 }
+@media(max-width:360px){.inds{margin-left:-14px;margin-right:-14px;padding-left:14px;padding-right:14px}}
