@@ -6,3 +6,4 @@ seg/
 sound.wav
 *.mp4
 __pycache__/
+thumbnail.png
