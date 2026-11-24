@@ -969,3 +969,26 @@ body[data-page="contact"] .path h2{font-size:clamp(30px,3.6vw,48px);letter-spaci
   .hero-live{display:flex;margin-top:22px;padding-right:14px}
   .hl-t span{font-size:13.5px}
 }
+
+/* ---- Unslop polish: sentence-case labels, quiet motion, no decorative filler ---- */
+.kicker,.hero .formerly,.m-head,.m-lab,.trust p,.gtag,.lab,.fgrid h4,.ph-t,.hl-t b,.cc .tag,.cc .nums span,
+.ci .lb,.tbl th,.price .pt,.cl-l,.reg-t{text-transform:none;letter-spacing:.01em}
+.kicker{font-size:14px;font-weight:600}
+.hero .formerly{font-size:14px;font-weight:500}
+.m-head{font-size:14px;font-weight:500}
+.m-lab{font-size:13px;font-weight:600}
+.trust p{font-size:14px;font-weight:500;flex-basis:100%;margin-bottom:-12px}
+.gtag{font-size:12px;font-weight:600}
+.lab{font-size:13px;font-weight:600}
+.fgrid h4{font-size:14px;font-weight:600;color:var(--dim)}
+.ph-t,.price .pt,.reg-t,.cl-l{font-size:14px;font-weight:500}
+.hl-t b{font-size:13px;font-weight:600}
+.cc .tag,.cc .nums span{font-size:12px}
+.ci .lb,.tbl th{font-size:13px;font-weight:600}
+/* the matching card is a demo, not live: no pulsing dot */
+.m-live{animation:none;box-shadow:none}
+/* hover: colour, not size */
+.brand:hover img{transform:none}
+.wa:hover{transform:none;filter:brightness(1.08)}
+/* closing panel: no background doodles */
+.cta::before{display:none}
