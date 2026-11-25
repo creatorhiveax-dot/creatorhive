@@ -992,3 +992,7 @@ body[data-page="contact"] .path h2{font-size:clamp(30px,3.6vw,48px);letter-spaci
 .wa:hover{transform:none;filter:brightness(1.08)}
 /* closing panel: no background doodles */
 .cta::before{display:none}
+/* three live reels: newest one gets the full row */
+.reels>.reel:first-child:nth-last-child(odd){grid-column:1/-1}
+@media(min-width:1101px){.reels>.reel:first-child:nth-last-child(odd){grid-template-columns:minmax(180px,220px) minmax(0,640px)}}
+body[data-page="home"] .kicker{letter-spacing:.01em}
