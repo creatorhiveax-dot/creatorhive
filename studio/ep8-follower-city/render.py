@@ -19,7 +19,7 @@ exe = '/opt/pw-browsers/chromium' if os.path.exists('/opt/pw-browsers/chromium')
 with sync_playwright() as p:
     b = p.chromium.launch(executable_path=exe, args=['--allow-file-access-from-files', '--no-sandbox'])
     vp = {'width': 1080, 'height': 1920}
-    dsf = 2 if mode == 'full' else (0.5 if mode == 'prev' else 1)
+    dsf = 2 if mode == 'full' else (0.5 if mode == 'prev' else 1)   # 'fhd' renders 1080x1920 frames the same way as 'full'
     ctx = b.new_context(viewport=vp, device_scale_factor=dsf)
     pg = ctx.new_page(); errs = []; pg.on('pageerror', lambda e: errs.append(str(e)))
     pg.goto(PAGE); pg.evaluate('document.fonts.ready'); pg.wait_for_timeout(1200)
